@@ -6,12 +6,25 @@ calculator program yourself in this file.
 
 from arithmetic import *
 
-def token_string(sen):
-    """ tokenizing the input"""
-    tokens = sen.split(" ")
-    return tokens
+# def token_string(sen):
+#     """ tokenizing the input"""
+#     tokens = sen.split(" ")
+#     return tokens
 
-token_string("cat dog mouse")
+def call_function():
+
+    while True:
+        user_input = input("")
+
+        tokens = user_input.split(" ")
+        if tokens[0] == "q":
+            break
+        elif tokens[0] == "+":
+            print(add(float(tokens[1]), float(tokens[2])))
+            
+
+
+call_function()
 
 # while True:
     
