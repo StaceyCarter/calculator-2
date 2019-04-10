@@ -11,7 +11,7 @@ from arithmetic import *
 #     tokens = sen.split(" ")
 #     return tokens
 
-def call_function():
+def run_calculator():
 
     while True:
         user_input = input("")
@@ -27,12 +27,18 @@ def call_function():
             print(multiply(float(tokens[1]), float(tokens[2])))
         elif tokens[0] == "/":
             print(divide(float(tokens[1]), float(tokens[2])))
-
-
+        elif tokens[0] == "square":
+            print(square(float(tokens[1])))
+        elif tokens[0] == "cube":
+            print(cube(float(tokens[1])))
+        elif tokens[0] == "pow":
+            print(power(float(tokens[1]), float(tokens[2])))
+        elif tokens[0] == "mod":
+            print(mod(float(tokens[1]), float(tokens[2])))
             
 
 
-call_function()
+run_calculator()
 
 # while True:
     
