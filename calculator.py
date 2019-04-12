@@ -29,8 +29,8 @@ def run_calculator():
 
         if operator == "+":
             print(add(numbers))
-        # elif tokens[0] == "-":
-        #     print(subtract(float(tokens[1]), float(tokens[2])))
+        elif operator == "-":
+            print(subtract(numbers))
         # elif tokens[0] == "*":
         #     print(multiply(float(tokens[1]), float(tokens[2])))
         # elif tokens[0] == "/":

@@ -7,10 +7,10 @@ def add(nums):
     return sum(nums)
 
 
-def subtract(num1, num2):
+def subtract(nums):
     """Return the second number subtracted from the first."""
 
-    return num1 - num2
+    return functools.reduce(lambda a, b : a - b, nums)
 
 
 def multiply(num1, num2):
