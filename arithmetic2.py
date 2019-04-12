@@ -41,16 +41,16 @@ def cube(num1):
     return num1 * num1 * num1
 
 
-def power(num1, num2):
+def power(nums):
     """Raise num1 to the power of num and return the value."""
 
-    return num1 ** num2  # ** = exponent operator
+    return functools.reduce(lambda a, b : a ** b, nums)
 
 
-def mod(num1, num2):
+def mod(nums):
     """Return the remainder of num / num2."""
 
-    return num1 % num2
+    return functools.reduce(lambda a, b : a % b, nums)
 
 
 

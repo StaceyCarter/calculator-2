@@ -35,14 +35,21 @@ def run_calculator():
             print(multiply(numbers))
         elif operator == "/":
             print(divide(numbers))
-        # elif tokens[0] == "square":
-        #     print(square(float(tokens[1])))
-        # elif tokens[0] == "cube":
-        #     print(cube(float(tokens[1])))
-        # elif tokens[0] == "pow":
-        #     print(power(float(tokens[1]), float(tokens[2])))
-        # elif tokens[0] == "mod":
-        #     print(mod(float(tokens[1]), float(tokens[2])))
+        elif operator == "pow":
+            print(power(numbers))
+        elif operator == "mod":
+            print(mod(numbers))
+
+        if len(numbers) == 1 and operator == "square":
+            print(square(numbers[0]))
+        
+        if len(numbers) == 1 and operator == "cube":
+            print(cube(numbers[0]))
+
+        if len(numbers) > 1 and operator == "square" or operator == "cube":
+            print("Too many numbers for this function")
+            run_calculator()
+
             
 
 def convert_nums_to_floats(li):
