@@ -13,16 +13,16 @@ def subtract(nums):
     return functools.reduce(lambda a, b : a - b, nums)
 
 
-def multiply(num1, num2):
+def multiply(nums):
     """Multiply the two inputs together."""
 
-    return num1 * num2
+    return functools.reduce(lambda a, b : a * b, nums)
 
 
-def divide(num1, num2):
+def divide(nums):
     """Divide the first input by the second, returning a floating point."""
 
-    return num1 / num2
+    return functools.reduce(lambda a, b : a / b, nums)
 
 
 def square(num1):

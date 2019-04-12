@@ -31,10 +31,10 @@ def run_calculator():
             print(add(numbers))
         elif operator == "-":
             print(subtract(numbers))
-        # elif tokens[0] == "*":
-        #     print(multiply(float(tokens[1]), float(tokens[2])))
-        # elif tokens[0] == "/":
-        #     print(divide(float(tokens[1]), float(tokens[2])))
+        elif operator == "*":
+            print(multiply(numbers))
+        elif operator == "/":
+            print(divide(numbers))
         # elif tokens[0] == "square":
         #     print(square(float(tokens[1])))
         # elif tokens[0] == "cube":
