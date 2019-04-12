@@ -15,14 +15,20 @@ from functools import reduce
 def run_calculator():
 
     while True:
-        user_input = input("")
+        user_input = input("> ")
 
         tokens = user_input.split(" ")
-        if tokens[0] == "q":
+        operator = tokens[0]
+
+
+        if operator == "q":
             break
 
-        elif tokens[0] == "+":
-            print(add(tokens[1:]))
+        numbers = convert_nums_to_floats(tokens[1:])
+
+
+        if operator == "+":
+            print(add(numbers))
         # elif tokens[0] == "-":
         #     print(subtract(float(tokens[1]), float(tokens[2])))
         # elif tokens[0] == "*":
@@ -47,7 +53,7 @@ def convert_nums_to_floats(li):
         floatified.append(float(number))
     return floatified
 
-convert_nums_to_floats(['1', '2', '3.5'])
+
 
 run_calculator()
 
