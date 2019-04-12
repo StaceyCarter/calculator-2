@@ -22,9 +22,14 @@ def run_calculator():
 
 
         if operator == "q":
-            break
+            return
+        
+        try:
+            numbers = convert_nums_to_floats(tokens[1:])
+        except ValueError:
+            print("Please enter valid numbers")
+            run_calculator()
 
-        numbers = convert_nums_to_floats(tokens[1:])
 
 
         if operator == "+":
@@ -39,18 +44,16 @@ def run_calculator():
             print(power(numbers))
         elif operator == "mod":
             print(mod(numbers))
-
-        if len(numbers) == 1 and operator == "square":
+        elif len(numbers) == 1 and operator == "square":
             print(square(numbers[0]))
-        
-        if len(numbers) == 1 and operator == "cube":
+        elif len(numbers) == 1 and operator == "cube":
             print(cube(numbers[0]))
-
-        if len(numbers) > 1 and operator == "square" or operator == "cube":
+        elif len(numbers) > 1 and operator == "square" or operator == "cube":
             print("Too many numbers for this function")
             run_calculator()
+        else:
+            print("Please enter a valid operator")
 
-            
 
 def convert_nums_to_floats(li):
     """List -> List. Takes in tokenized input and converts everything into floats
